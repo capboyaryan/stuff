@@ -1,20 +1,20 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 int main()
 {
-    int a,b,c;
-
-    printf("Enter your number\n");
-    scanf("%d", &a);
-
-    for(b=0;a!=b,a!=0;)
+    int size;
+    char *text=NULL;
+    printf("Enter limit of the text:");
+    scanf("%d",&size);
+    text = (char *)malloc(size*sizeof(char));
+    if(text !=NULL)
     {
-        b=a%10;
-        c=a/10;
-        a=c;
-        printf("%d",b);
+        printf("Enter some text:");
+        scanf("%s",text);
+        printf("Inputted text is:%s\n",text);
     }
-
-
+    free(text);
+    text=NULL;
     return 0;
+
 }
