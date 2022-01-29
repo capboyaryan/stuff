@@ -13,6 +13,7 @@ int next_permutation(int n, char **s)
     {
         if((strcmp(s[n-i-1],s[n-i]))<0)
         {
+            char *store=s[n-i-1];
             char **arr;
             arr=calloc(i+1,sizeof(char*));
             for(int j=n-i-1,k=0;j<n;j++,k++)
@@ -33,18 +34,27 @@ int next_permutation(int n, char **s)
                     else
                     checker++;
                 }
-                if(checker==i-1)
+                if(checker==i)
                     break;
             }
-            char* temp_2=arr[1];
-            int t;
-            for(int t=0;t<n;t++)
+            int f=0;
+            for(f=0;f<i;f++)
+            {
+                if(strcmp(arr[f],arr[f+1])==0)
+                continue;
+                else if(strcmp(store,arr[f])==0)
+                break;
+            }
+            char* temp_2=arr[f+1];
+            int t=0;
+            for(t=0;t<n;t++)
             {
                 if(temp_2==s[t])
                     break;
             }
             s[t]=s[n-i-1];
             s[n-i-1]=temp_2;
+            if((n-i)!=(n-1))
             for(int l,checker;;)
             {
                 for(l=n-i,checker=0;l<n-1;l++)
@@ -63,6 +73,10 @@ int next_permutation(int n, char **s)
                     break;
             }
             return 1;
+        }
+        else if(strcmp(s[0],s[1])>0 && i==(n-1))
+        {
+            return 0;
         }
     }
 }
