@@ -25,11 +25,11 @@ void longest_out_of_five(char** a)
     strcpy(temp,a[0]);
     for(int i=0;i<3;i++)
     {
-        if(strlen((*a+i+1))>strlen(temp))
+        if(strlen(a[i+1])>strlen(temp))
         {
-            strcpy(temp,(*a+i+1));
+            strcpy(temp,a[i+1]);
         }
     }
     printf("The longest name is %s",temp);
 }
- 
+
