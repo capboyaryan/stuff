@@ -7,6 +7,7 @@ int main()
 {
     char** name_list;
     name_list=calloc(5,sizeof(char*));
+    
     int k;
     for(k=0;k<5;k++)
     {
