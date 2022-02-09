@@ -23,7 +23,7 @@ void longest_out_of_five(char** a)
 {
     char temp[15];
     strcpy(temp,a[0]);
-    for(int i=0;i<3;i++)
+    for(int i=0;i<=3;i++)
     {
         if(strlen(a[i+1])>strlen(temp))
         {
