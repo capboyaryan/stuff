@@ -9,10 +9,10 @@ int main()
     name_list=calloc(5,sizeof(char*));
     int k;
     for(k=0;k<5;k++)
-    *(name_list+k)=calloc(15,sizeof(char));
-
-    for(k=0;k<5;k++)
+    {
+        *(name_list+k)=calloc(15,sizeof(char));
         scanf("%s",*(name_list+k));
+    }
     longest_out_of_five(name_list);
     free(name_list);
 
@@ -32,4 +32,3 @@ void longest_out_of_five(char** a)
     }
     printf("The longest name is %s",temp);
 }
-
