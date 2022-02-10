@@ -1,6 +1,5 @@
- 
 #include <stdio.h>
-
+//Uppercase
 int main()
 {
     char str[100];
