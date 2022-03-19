@@ -3,7 +3,8 @@
 
 std::string player::get_name()
 {
-    return (*name);
+    std::string t=*name;
+    return t;
 }
 int player::get_health()
 {
@@ -22,7 +23,11 @@ player::player()
     name=new std::string;
     //ctor
 }
-
+player::player(std::string name_val,int health_val):health{health_val}
+{
+    name=new std::string;
+    *name=name_val;
+}
 player::~player()
 {
     delete name;

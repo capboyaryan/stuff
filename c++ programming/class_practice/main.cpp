@@ -8,8 +8,9 @@ int main()
     player player1;
     player1.set_name("Aryan");
     player1.set_health(100);
-    int ph=player1.get_health();
-    string pn=player1.get_name();
-    cout<<"Player name is: "<<pn<<endl<<"Health is: "<<ph;
+    player player2("Kinshuk",75);
+
+    cout<<"Player "<<player1.get_name()<<"'s health is: "<<player1.get_health()<<endl;
+    cout<<"Player "<<player2.get_name()<<"'s health is: "<<player2.get_health();
     return 0;
 }

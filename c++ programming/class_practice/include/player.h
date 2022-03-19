@@ -15,6 +15,7 @@ class player
         void set_health(int a);
         //constructor and destructor
         player();
+        player(std::string,int);
         ~player();
 };
 
