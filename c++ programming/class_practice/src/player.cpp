@@ -23,10 +23,8 @@ player::player()
     name=new std::string;
     //ctor
 }
-player::player(std::string name_val,int health_val):health{health_val}
+player::player(std::string name_val,int health_val):name{new std::string{name_val}},health{health_val}
 {
-    name=new std::string;
-    *name=name_val;
 }
 player::~player()
 {
