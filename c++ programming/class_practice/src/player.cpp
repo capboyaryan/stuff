@@ -1,6 +1,6 @@
 #include "player.h"
-//methods
 
+//methods
 std::string player::get_name()
 {
     std::string t=*name;
@@ -18,16 +18,13 @@ void player::set_health(int a)
 {
     health=a;
 }
-player::player()
-{
-    name=new std::string;
-    //ctor
-}
-player::player(std::string name_val,int health_val):name{new std::string{name_val}},health{health_val}
-{
-}
+//constructors
+player::player():name{new std::string}{}
+player::player(std::string name_val,int health_val):name{new std::string{name_val}},health{health_val}{}
+player::player(const player &source):name{new std::string{*source.name}},health{source.health}{}
+
+//destructor
 player::~player()
 {
     delete name;
-    //dtor
 }

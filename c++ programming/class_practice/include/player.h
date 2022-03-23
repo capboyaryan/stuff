@@ -16,6 +16,7 @@ class player
         //constructor and destructor
         player();
         player(std::string,int);
+        player(const player &source);
         ~player();
 };
 
