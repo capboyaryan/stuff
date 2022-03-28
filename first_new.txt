@@ -1,1 +1,2 @@
 This is new
+Testing integration of git with Visual Studio.
