@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -41,6 +43,8 @@
 		<Unit filename="Savings_Account.cpp" />
 		<Unit filename="Savings_Account.h" />
 		<Unit filename="Section_15_Workspace.cpp" />
+		<Unit filename="include/Trust_Account.h" />
+		<Unit filename="src/Trust_Account.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
