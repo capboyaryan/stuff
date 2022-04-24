@@ -17,14 +17,14 @@ int main()
     time_t converted_input_time=mktime(&input_time);
 
     time_t current_time=time(0);
-    tm *current=new tm;
-    current=gmtime(&current_time);
-    current->tm_hour=current->tm_min=current->tm_sec=0;
-    current_time=mktime(current);
+    tm current={};
+    tm* current_ptr=&current;
+    current_ptr=gmtime(&current_time);
+    current_ptr->tm_hour=current_ptr->tm_min=current_ptr->tm_sec=0;
+    current_time=mktime(current_ptr);
 
     int number_of_days=(int)((converted_input_time-current_time)/86400);
     cout<<"The number of days between today and the inputted date is : "<<number_of_days;
 
-    delete current;
     return 0;
 }
