@@ -3,7 +3,8 @@
 using namespace std;
 
 int linear_search(const int source[],int length,int element);
-int binarySearch(const int source[],int length,int element);
+int binarySearch(int source[],int length,int element);
+void bubble_sort(int arr[],int size_of_array);
 
 int main()
 {
@@ -21,6 +22,8 @@ int main()
     cout<<"Enter element to be searched: ";
     int element_find;
     cin>>element_find;
+
+    bubble_sort(arr,len);//array needs to be sorted in case it has to be used with binary search
 
     cout<<"\nBy Linear Search\n\n";
     int temp=linear_search(arr,len,element_find);
@@ -44,7 +47,7 @@ int main()
 
 int linear_search(const int source[],int length,int element)
 {
-    for(int i=0;i<length;i++)
+    for(int i=0;i<length;i++)//goes through the array one by one and compares each element with with the element to be found
     {
         if(source[i]==element)
         {
@@ -56,7 +59,7 @@ int linear_search(const int source[],int length,int element)
     return 0;
 }
 
-int binarySearch(const int source[],int length,int element)
+int binarySearch(int source[],int length,int element)
 {
     int end_of_array,start_of_array,middle_of_array;
     end_of_array=length-1;
@@ -64,13 +67,28 @@ int binarySearch(const int source[],int length,int element)
 
     while(start_of_array<=end_of_array)
     {
-        middle_of_array=(end_of_array+start_of_array)/2;
-        if(source[middle_of_array]==element)
+        middle_of_array=(end_of_array+start_of_array)/2;//finds the middle element of the array
+        if(source[middle_of_array]==element)//if middle element is equal to element to be found returns middle element
             return middle_of_array;
         else if(source[middle_of_array]>element)
+        //if middle element is greater than element to be found then the left half of the array is taken in next iteration
             end_of_array=middle_of_array-1;
-        else
+        else//if middle element is smaller than right half of the array is taken in next iteration
             start_of_array=middle_of_array+1;
     }
     return -1;
+}
+
+void bubble_sort(int arr[],int size_of_array)
+{
+    for(int l=0;l<size_of_array-1;l++)//bubble sort
+    {
+        if(arr[l]>arr[l+1])
+        {
+        int temp=arr[l];
+        arr[l]=arr[l+1];
+        arr[l+1]=temp;
+        l=-1;
+        }
+    }
 }

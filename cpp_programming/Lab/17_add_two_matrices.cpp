@@ -46,13 +46,13 @@ int main()
 int** add_two_array(int **arr,int **arr_2,int length,int width)
 {
     cout<<"Array after addition is :\n\n";
-    int **temp=new int*[length];
+    int **temp=new int*[length];//allocating memory
     for(int k=0;k<length;k++)
     {
         temp[k]=new int[width];
     }
 
-    for(int i=0;i<length;i++)
+    for(int i=0;i<length;i++)//adding each element
     {
         for(int j=0;j<width;j++)
         {

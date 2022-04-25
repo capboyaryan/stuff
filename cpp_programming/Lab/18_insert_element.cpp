@@ -48,21 +48,21 @@ void insert_element(int* source,int src_len,int element,int position)//{1,2,3,4}
 {
     int* temp=new int[src_len+1];
 
-    for(int i=0;i<position-1;i++)
+    for(int i=0;i<position-1;i++)//add elements in temp till the position to be inserted
     {
         temp[i]=source[i];
     }                       //after completion of loop temp={1,2}
-
+//  add the element to be inserted
     temp[position-1]=element;//temp={1,2,0}
 
-    for(int j=position-1,k=position;j<src_len;j++,k++)
+    for(int j=position-1,k=position;j<src_len;j++,k++)//add the rest of the elements
     {
         temp[k]=source[j];
     }                       //after completion of loop={1,2,0,3,4}
 
-    delete [] source;
+    delete [] source;//deleting source's memeory
     source=new int[src_len+1];
-    for(int i=0;i<src_len+1;i++)
+    for(int i=0;i<src_len+1;i++)//copying elements in temp to source
         source[i]=temp[i];
-    delete [] temp;
+    delete [] temp;//deleting temp's memory
 }
