@@ -1,17 +1,22 @@
 #include <iostream>
-#include <file.h>
+#include <fstream>
+#include <string>
 using namespace std;
 
 int main()
 {
-    file test("test.txt");
-    cout<<test.get_line();
+    fstream f;
+    f.open("test.txt",ios::in);
+    string line;
+    int tell;
 
-    cout<<"\n";
-    int num=test.find("find");
-    cout<<"\"find\" was found at "<<num<<endl;
-    test.close();
-    cout<<"\ntest.txt has been closed\n";
+    while(f)
+    {
+        getline(f,line);
+        cout<<line<<"\n";
+        tell=f.tellg();
+        //cout<<tell<<"\n";
+    }
 
     return 0;
 }

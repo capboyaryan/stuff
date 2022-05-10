@@ -47,15 +47,17 @@ int main()
 
 int linear_search(const int source[],int length,int element)
 {
-    for(int i=0;i<length;i++)//goes through the array one by one and compares each element with with the element to be found
+    int i=0;
+    for(i=0;i<length;i++)//goes through the array one by one and compares each element with with the element to be found
     {
         if(source[i]==element)
         {
             return i;
         }
-        else if(i==(length-1) && source[i]!=element)
-            return -1;
     }
+    if(i==(length))
+        return -1;
+    
     return 0;
 }
 

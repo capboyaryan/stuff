@@ -1,0 +1,12 @@
+[
+{
+  "directory": "E:/Programming/cpp_programming/Lab/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -Wall -o CMakeFiles\\20_static.dir\\20_static.cpp.obj -c E:\\Programming\\cpp_programming\\Lab\\20_static.cpp",
+  "file": "E:/Programming/cpp_programming/Lab/20_static.cpp"
+},
+{
+  "directory": "E:/Programming/cpp_programming/Lab/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -Wall -o CMakeFiles\\20_static.dir\\20_class.cpp.obj -c E:\\Programming\\cpp_programming\\Lab\\20_class.cpp",
+  "file": "E:/Programming/cpp_programming/Lab/20_class.cpp"
+}
+]
