@@ -14,6 +14,10 @@ int main()
     {
         getline(f,line);
         cout<<line<<"\n";
+        if(f.tellg()!=(-1))
+        {
+            cout<<"\nLOGIC\n";
+        }
         tell=f.tellg();
         //cout<<tell<<"\n";
     }
