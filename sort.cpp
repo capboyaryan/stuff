@@ -44,13 +44,25 @@ void display(const vector<int> &v,int color_code_1,int pos_1,int color_code_2,in
         if(i==pos_1 || i==pos_2)
             SetConsoleTextAttribute(hConsole,15);
     }
-    cout<<" |__________\n";
+    cout<<" |______________________________________________________________________________\n";
 }
 
 
 int main()
 {
-    vector<int> vec={2,4,3,1,5};
+    vector<int> vec;
+
+    cout<<"Enter size of array: ";
+    int size;
+    cin>>size;
+    cout<<"Enter the elements\n";
+    for(int j=0;j<size;j++)
+    {
+        int temp;
+        cin>>temp;
+        vec.push_back(temp);
+    }
+
     int checker=0,l=0;
 
     system("cls");
@@ -64,7 +76,7 @@ int main()
             system("cls");
             display(vec,9,l,9,l+1);
             this_thread::sleep_for(std::chrono::seconds {2});
-            
+
             if(vec.at(l)>vec.at(l+1))
             {
                 system("cls");
