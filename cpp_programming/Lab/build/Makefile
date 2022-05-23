@@ -510,65 +510,41 @@ ContinuousSubmit/fast:
 .PHONY : ContinuousSubmit/fast
 
 #=============================================================================
-# Target rules for targets named 20_static
+# Target rules for targets named time
 
 # Build rule for target.
-20_static: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 20_static
-.PHONY : 20_static
+time: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 time
+.PHONY : time
 
 # fast build rule for target.
-20_static/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\20_static.dir\build.make CMakeFiles/20_static.dir/build
-.PHONY : 20_static/fast
+time/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\time.dir\build.make CMakeFiles/time.dir/build
+.PHONY : time/fast
 
-20_class.obj: 20_class.cpp.obj
-.PHONY : 20_class.obj
-
-# target to build an object file
-20_class.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\20_static.dir\build.make CMakeFiles/20_static.dir/20_class.cpp.obj
-.PHONY : 20_class.cpp.obj
-
-20_class.i: 20_class.cpp.i
-.PHONY : 20_class.i
-
-# target to preprocess a source file
-20_class.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\20_static.dir\build.make CMakeFiles/20_static.dir/20_class.cpp.i
-.PHONY : 20_class.cpp.i
-
-20_class.s: 20_class.cpp.s
-.PHONY : 20_class.s
-
-# target to generate assembly for a file
-20_class.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\20_static.dir\build.make CMakeFiles/20_static.dir/20_class.cpp.s
-.PHONY : 20_class.cpp.s
-
-20_static.obj: 20_static.cpp.obj
-.PHONY : 20_static.obj
+16_time.obj: 16_time.cpp.obj
+.PHONY : 16_time.obj
 
 # target to build an object file
-20_static.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\20_static.dir\build.make CMakeFiles/20_static.dir/20_static.cpp.obj
-.PHONY : 20_static.cpp.obj
+16_time.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\time.dir\build.make CMakeFiles/time.dir/16_time.cpp.obj
+.PHONY : 16_time.cpp.obj
 
-20_static.i: 20_static.cpp.i
-.PHONY : 20_static.i
+16_time.i: 16_time.cpp.i
+.PHONY : 16_time.i
 
 # target to preprocess a source file
-20_static.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\20_static.dir\build.make CMakeFiles/20_static.dir/20_static.cpp.i
-.PHONY : 20_static.cpp.i
+16_time.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\time.dir\build.make CMakeFiles/time.dir/16_time.cpp.i
+.PHONY : 16_time.cpp.i
 
-20_static.s: 20_static.cpp.s
-.PHONY : 20_static.s
+16_time.s: 16_time.cpp.s
+.PHONY : 16_time.s
 
 # target to generate assembly for a file
-20_static.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\20_static.dir\build.make CMakeFiles/20_static.dir/20_static.cpp.s
-.PHONY : 20_static.cpp.s
+16_time.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\time.dir\build.make CMakeFiles/time.dir/16_time.cpp.s
+.PHONY : 16_time.cpp.s
 
 # Help Target
 help:
@@ -609,13 +585,10 @@ help:
 	@echo ... NightlySubmit
 	@echo ... NightlyTest
 	@echo ... NightlyUpdate
-	@echo ... 20_static
-	@echo ... 20_class.obj
-	@echo ... 20_class.i
-	@echo ... 20_class.s
-	@echo ... 20_static.obj
-	@echo ... 20_static.i
-	@echo ... 20_static.s
+	@echo ... time
+	@echo ... 16_time.obj
+	@echo ... 16_time.i
+	@echo ... 16_time.s
 .PHONY : help
 
 

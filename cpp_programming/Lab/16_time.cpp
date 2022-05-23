@@ -21,7 +21,7 @@ int main()
     tm* current_ptr=&current;//make a pointer to struct tm
     current_ptr=gmtime(&current_time);//convert time_t to tm struct 
     current_ptr->tm_hour=current_ptr->tm_min=current_ptr->tm_sec=0;//set hours,seconds and minutes to 0 (as they will interfere with calculations)
-    current_time=mktime(current_ptr);//covert tm struct to time_t 
+    current_time=mktime(current_ptr);//convert tm struct to time_t 
 
     int number_of_days=(int)((converted_input_time-current_time)/86400);//find difference in number of seconds and convert it into days
     cout<<"The number of days between today and the inputted date is : "<<number_of_days;

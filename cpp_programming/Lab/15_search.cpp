@@ -13,7 +13,7 @@ int main()
     cin>>len;
 
     cout<<"Enter elements of the array: ";
-    int arr[len];
+    int *arr=new int[len];
     for(int i=0;i<len;i++)
     {
         cin>>arr[i];
@@ -40,7 +40,7 @@ int main()
     else
         cout<<"Element not found\n";
 
-
+    delete [] arr;
     return 0;
 }
 

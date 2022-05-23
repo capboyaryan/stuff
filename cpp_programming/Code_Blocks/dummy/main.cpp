@@ -25,6 +25,6 @@ int main()
     int number_of_days=(int)((converted_input_time-current_time)/86400);
     cout<<"The number of days between today and the inputted date is : "<<number_of_days;
 
-    delete current;
+    //delete current;
     return 0;
 }
