@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstring>
-
+#include <iomanip>
+#include <string>
 using namespace std;
 
 class String
@@ -54,15 +55,34 @@ public:
         else 
             return false;
     }
+    friend ostream& operator<<(ostream &os,String str);
 };
 
+ostream& operator<<(ostream &os,const String str)
+{
+    os<<str.get_string();
+    return os;
+}
 
 int main()
 {
-    char* str_1=new char[30];
-    char* str_2=new char[30];
+    char* str_1=new char[70];
+    char* str_2=new char[70];
 
     cout<<"Enter first string"<<endl;
+    cin.getline(str_1,69);
+    cout<<"Enter the second string"<<endl;
+    cin.getline(str_2,69);
 
+    String first(str_1);
+    String second(str_2);
 
+    delete [] str_1;
+    delete [] str_2;
+
+    cout<<"Concatenating the strings :"<<(first+second)<<endl;
+    cout<<boolalpha;
+    cout<<"Is first string greater than second string :"<<(first>second)<<endl;
+    cout<<"Is first string smaller than second string :"<<(first<second)<<endl;
+    cout<<"Is first string equal to second string :"<<(first==second)<<endl;
 }
