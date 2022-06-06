@@ -5,17 +5,30 @@ using namespace std;
 class Integer
 {
     int i;
-
+    static int count;
     public:
-    Integer(){cout<<"\nDefault constructor called\n";}
-    ~Integer(){cout<<"\nDefault destructor called\n";}
+    Integer(){
+        count++;
+        cout<<"\nDefault constructor called for: "<<count<<endl;
+        }
+    ~Integer(){
+        cout<<"\nDefault destructor called for: "<<count;
+        count--;
+        }
     Integer(const Integer &I){
         this->i=I.get_data();
-        cout<<"\nCopy constructor called\n";
+        count++;
+        cout<<"\nCopy constructor called for : "<<count<<endl;
     }
     void set_data(int x){i=x;};
     int get_data() const {return i;};
+    static int get_count()
+    {
+        return count;
+    }
 };
+
+int Integer::count;
 
 int main()
 {
@@ -25,10 +38,9 @@ int main()
    
     Integer a;
     a.set_data(num);
-    cout<<"Value of a is : "<<a.get_data();
+    cout<<"Value of Object Initialized by Default Constructor is : "<<a.get_data()<<endl;
    
     Integer b{a};
-
-    cout<<"Value of b is : "<<b.get_data();
+    cout<<"Value of Object Intialized by Copy Constructor is : "<<b.get_data()<<endl;
 
 }
