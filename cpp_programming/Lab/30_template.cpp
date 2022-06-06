@@ -92,4 +92,15 @@ int main()
     vec.pop_back();
     vec.push_back(15);
     cout<<vec.at(0)<<" "<<vec.at(1)<<endl;
+
+    MyVector<char> vec_2;
+    vec_2.push_back('a');
+    vec_2.push_back('b');
+
+    cout<<vec_2.at(0)<<" "<<vec_2.at(1)<<endl;
+
+    vec_2.pop_back();
+    vec_2.push_back('v');
+    cout<<vec_2.at(0)<<" "<<vec_2.at(1)<<endl;
+
 }
