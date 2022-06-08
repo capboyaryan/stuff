@@ -72,10 +72,12 @@ class MyVector
         catch(const int x)
         {
             std::cout<<"Out of bounds(underflow)" << '\n';
+            throw -1;
         }
         catch(const char c)
         {
             std::cout<<"Out of bounds(overflow)"<<'\n';
+            throw '1';
         }
         return 0;
     }
