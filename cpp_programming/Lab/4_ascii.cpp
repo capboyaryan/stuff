@@ -8,7 +8,7 @@ int main()
     cout<<"Enter character\n";
     cin>>ch;
     
-    cout<<(int)ch;
+    cout<<"ASCII value of inputted character is : "<<(int)ch;
 
     return 0;
 }
