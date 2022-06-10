@@ -53,6 +53,6 @@ int main()
             cout<<"Smallest Number is : "<<arr.at(0)<<endl;
         }
     }
-
+    
     return 0;
 }
