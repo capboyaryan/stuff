@@ -16,8 +16,6 @@ class my_pair
         }
 };
 
-//int average_of_pair(const my_pair &p);
-
 int main()
 {
     int a,b;

@@ -23,7 +23,7 @@ int main()
         }
     }
     sum=temp+sum;
-    
+    cout<<"Sum of first and last digit is: ";
     cout<<sum<<endl;
 
     return 0;

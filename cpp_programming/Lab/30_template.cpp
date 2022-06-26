@@ -86,21 +86,25 @@ class MyVector
 int main()
 {
     MyVector<int> vec;
+    cout<<"Pushing 10 and 12 to the first vector: \n";
     vec.push_back(10);
     vec.push_back(12);
 
     cout<<vec.at(0)<<" "<<vec.at(1)<<endl;
 
+    cout<<"Removing 12 and adding 15 to the first vector: \n";
     vec.pop_back();
     vec.push_back(15);
     cout<<vec.at(0)<<" "<<vec.at(1)<<endl;
 
+    cout<<"Pushing a and b to the second vector: \n";
     MyVector<char> vec_2;
     vec_2.push_back('a');
     vec_2.push_back('b');
 
     cout<<vec_2.at(0)<<" "<<vec_2.at(1)<<endl;
 
+    cout<<"Removing b and adding v to the first vector: \n";
     vec_2.pop_back();
     vec_2.push_back('v');
     cout<<vec_2.at(0)<<" "<<vec_2.at(1)<<endl;

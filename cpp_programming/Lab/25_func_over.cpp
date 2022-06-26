@@ -14,8 +14,7 @@ int add_numbers(int a,int b,int c)
     cout<<"Sum of 1st ,2nd and 3rd : "<<(a+b+c)<<"\n";
     return a+b+c;
 }
-template <typename T,typename K>
-int add_numbers(T a,T b,K c,K d)
+int add_numbers(int a,int b,int c,int d)
 {
     cout<<"Function with four parameters called\n";
     cout<<"Sum of all numbers : "<<(a+b+c+d)<<endl;
@@ -33,7 +32,6 @@ int main()
     add_numbers(a,b,c);
     cout<<"\n";
     add_numbers(a,b,c,d);
-    cout<<"\n";
-    add_numbers(10,20,10.5,10.7);
+    cout<<'\n';
 
 }
